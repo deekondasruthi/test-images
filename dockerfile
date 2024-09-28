@@ -1,5 +1,5 @@
-FROM openjdk:17
+FROM nginx
 
-EXPOSE 8080
+EXPOSE 80
 
-ENTRYPOINT ["java", "-jar", "/app/ROOT.jar"]
+ENTRYPOINT [nginx-debug, '-g', 'daemon off;']

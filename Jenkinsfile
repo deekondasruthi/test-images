@@ -2,10 +2,9 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('List') {
             steps {
-                sh 'ls -l'
-                
+                sh 'ls -l'                
             }
         }
         stage('Build') {

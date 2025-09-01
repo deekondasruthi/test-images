@@ -19,7 +19,7 @@ pipeline {
         }
         stage('Echo stag') {
             steps {
-                sh 'Success'                
+                sh 'echo "Success"'                
             }
         }
     }

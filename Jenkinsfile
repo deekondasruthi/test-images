@@ -23,7 +23,7 @@ pipeline {
             emailext(
                 subject: "Build SUCCESS: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
                 body: """
-                    <p>Build Status: <b> style="color:green;"> SUCCESS </b></p>
+                    <p>Build Status: <b style="color:green;"> SUCCESS </b></p>
                     <p>Application API Base URL: https://satus-api.babujiventures.in</p> 
                     <p>Using the above base URL, you can test API endpoints and check service performance.</p>
                     <br/>
@@ -46,7 +46,7 @@ pipeline {
             emailext(
                 subject: "Build FAILED: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
                 body: """
-                    <p>Build Status: <b> style="color:red;"> FAILED </b></p>
+                    <p>Build Status: <b style="color:red;"> FAILED </b></p>
                     <p>Branch: ${env.GIT_BRANCH}</p>
                     <p>Please review the attached build.log file to identify the issue.</p>
                     <br/>

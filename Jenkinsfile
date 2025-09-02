@@ -4,17 +4,7 @@ pipeline {
     stages {
         stage('List') {
             steps {
-                sh 'ls -lh'                
-            }
-        }
-        stage('Build') {
-            steps {
-                git branch: 'Dev', credentialsId: 'test', url: 'https://github.com/deekondasruthi/test-images.git'
-            }
-        }
-        stage('Build') {
-            steps {
-                sh 'echo "This is Development Branch"'
+                cleanWs()                
             }
         }
     }

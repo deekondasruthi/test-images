@@ -7,6 +7,11 @@ pipeline {
                 cleanWs()                
             }
         }
+        stage('Build') {
+            steps {
+                git branch: 'Staging', credentialsId: 'test', url: 'https://github.com/deekondasruthi/test-images.git'
+            }
+        }
     }
     post {
         success {
